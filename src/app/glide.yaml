@@ -1,0 +1,15 @@
+package: .
+import:
+- package: google.golang.org/grpc
+  version: ^1.0.3
+- package: github.com/golang/protobuf
+  subpackages:
+  - protobuf
+  - proto-gen-go
+- package: github.com/grpc-ecosystem/grpc-gateway
+  version: ^1.1.0
+  subpackages:
+  - protoc-gen-grpc-gateway
+  - protoc-gen-grpc-swagger
+  - runtime
+- package: golang.org/x/net

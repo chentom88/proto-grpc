@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package api;
+
+import "google/api/annotations.proto";
+
+service HelloWorld {
+    rpc SayHello(HelloIn) returns (HelloOut) {
+        option (google.api.http) = {
+            get: "/v1/hello/{in}"
+        };
+    }
+}
+
+message HelloIn {
+    string in=1;
+}
+
+message HelloOut {
+    string out=1;
+}
